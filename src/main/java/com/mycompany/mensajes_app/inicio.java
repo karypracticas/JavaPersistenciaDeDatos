@@ -22,10 +22,10 @@ public class inicio {
       //Crear Menú de opciones
         do{
         System.out.println("-----------------------");
-        System.out.println(" 1.Crear mensajes");
+        System.out.println("1. Crear mensajes");
         System.out.println("2. Listar mensajes");
-        System.out.println("3. Editar mensajes");
-        System.out.println("4. Eliminar mensajes");
+        System.out.println("3. Eliminar mensajes");
+        System.out.println("4. Editar mensajes");
         System.out.println("5. Salir");  
         
         //Leer la opcion seleccionada por usuario
