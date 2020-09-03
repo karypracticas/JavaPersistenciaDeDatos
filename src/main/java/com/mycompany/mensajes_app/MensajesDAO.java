@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 /**
  *
  * @author Karina
@@ -73,8 +74,24 @@ public class MensajesDAO {
         }
     }
     
-    public static void actualizarMensajeDB(){
-        
+    public static void actualizarMensajeDB(Mensajes mensaje){
+         Conexion db_connect = new Conexion();
+     
+       try (Connection conexion = db_connect.get_connection()) {
+           PreparedStatement ps = null;
+           try{
+               String query = "UPDATE mensajes SET mensaje = ? WHERE id_mensaje = ? ";
+               ps = conexion.prepareStatement(query);
+               ps.setString(1, mensaje.getMensaje());
+               ps.setInt(2, mensaje.getId_mensaje());
+               ps.executeUpdate();
+               System.out.println("Actualización de mensaje en Bd exitoso");
+           }catch(SQLException ex){
+               System.out.println("ex");
+           }
+       } catch(SQLException e) {
+           System.out.println(e);
+       }
     }
-    
-}
+    }
+

@@ -39,10 +39,10 @@ public class inicio {
                 MensajesService.listarMensaje();
                 break;
             case 3:
-                MensajesService.editarMensaje();
+                MensajesService.borrarMensaje();
                 break;
             case 4:
-                MensajesService.borrarMensaje();
+                MensajesService.editarMensaje();
                 break;
             default:
                 break;
