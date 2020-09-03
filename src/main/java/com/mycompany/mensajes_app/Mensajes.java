@@ -4,6 +4,8 @@ package com.mycompany.mensajes_app;
  *
  * @author Karina
  */
+
+//Crear Modelo de mensajes
 public class Mensajes {
     int id_mensaje;
     String mensaje;
@@ -52,8 +54,5 @@ public class Mensajes {
 
     public void setFecha_mensaje(String fecha_mensaje) {
         this.fecha_mensaje = fecha_mensaje;
-    }
-    
-    
-    
+    }  
 }
